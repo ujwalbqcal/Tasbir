@@ -41,37 +41,6 @@
           </div>
         </div>
       
-     <!--
-      @section('content')
-        @if(count($image)>0)
-        <?php
-            $colcount=count($image);
-            $i=1;
-      ?>
-      <div id="albums">
-          <div class="row text-center">
-              @foreach($image as $images)
-               @if($i==$colcount)
-              <div class="medium-4 columns end">
-                  <a href="/originalpath/.$images->all()"><img class="thumbnail" src="{{asset('/storage/originalPath/'.$image->all())}}"></a>
-                  @else
-                   <div class="medium-4 columns">
-                  <a href="/originalpath/.$images->filename"><img class="thumbnail" src="{{asset('/storage/originalPath/'.$image->filename)}}"></a>
-                       @endif
-                       @if($i % 3==0)
-              </div>
-            </div>
-              <div class="row text-center">@else</div>
-              @endif
-              <?php $i++; ?>
-              @endforeach
-          </div>
-      </div>
-      @else
-      <p>No photos to display!</p>
-      @endif
-      @endsection-->
-      
       
       
         @if($image)
